@@ -1,3 +1,3 @@
 export function alertMessage() {
-	alert("from hogaaa.js")
+	alert("from hoge.js")
 }
