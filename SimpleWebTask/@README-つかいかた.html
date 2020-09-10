@@ -358,7 +358,7 @@
 						Node.jsはスクリプトを起動することでこのディレクトリのファイルを監視・コンパイルし、コンパイル後のファイルを <span class="parent">_Assets/</span> へと吐き出します。<br>
 						<br>
 						なお、jsはwebpackを知っている前提です。エントリーポイントは <span class="parent3">Resources/js/index.js</span> に設定してあります。<br>
-						<span class="parent3">views/</span> にはテンプレートをしまいます。使用しない場合は必要ありません。
+						テンプレートやVue.jsを使用する場合は <span class="parent3">views/</span> を作成します。
 					</p>
 				</div>
 			</div>
@@ -373,14 +373,14 @@
 					作業時にはタスクランナー(gulp)を起動させます。<br>
 					<span class="parent">_Develops/</span> > <span class="parent2">Node.js/</span> のディレクトリにて、ターミナルを開きます。<br>
 					<br>
-					まずは <span class="parent3">npm i</span> というコマンドを実行し、必要なモジュールをインストールします。<br>
+					初めてプロジェクトを触る時に <span class="parent3">npm i</span> というコマンドを実行し、必要なモジュールをインストールします。<br>
 					その後、以下のスクリプトを使えるようになります。（同ディレクトリ）
 				</p>
 				<p>
 					<dl class="dl taskdl">
 						<dt>gulp</dt>
 						<dd><span class="parent2">Resources/</span> > <span class="parent3">SCSS/</span> を監視し、scssコンパイルを行います。<br>
-						gulpをグローバルインストールしている必要がある。</dd>
+						gulpをグローバルインストールしている必要がある。（なければ <span class="parent3"> npx gulp </span>）</dd>
 						<dt>npm run build</dt>
 						<dd><span class="parent2">Resources/</span> > <span class="parent3">SCSS/</span> と <span class="parent2">Resources/</span> > <span class="parent3">JS/</span>にて、scssコンパイル・JSのバンドル・JSのES5コンパイルを行います。</dd>
 						<dt>npm run scss</dt>
