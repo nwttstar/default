@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	variables  /￣￣￣￣l____________________________________________
+*/
+
+// ━★	colors 
+$baseColor: #333;
+$baseColorBg: #eee;
+$baseColor_sub: #fff;
+$baseColorBg_sub: #fff;
+$baseColor_sub2: #fff;
+$baseColorBg_sub2: #fff;
+$accentColor: #f4ad53;
+$accentColor_sub: #1380b1;
+
+// ━★	font colors
+$fontColor: #333;
+$fontColor_Sub: #333;
+$fontColor_Sub2: #fff;
+$fontColor_link: #0000ff;
+
+// --★	boder style
+$borderColor: #ccc;
+$borderColor_Sub: #ccc;
+
+// --★ fonts size
+$font3S: 8px;
+$font2S: 10px;
+$fontS: 12px;
+$fontM: 14px;
+$fontL: 16px;
+$font2L: 18px;
+$font3L: 20px;
+$font4L: 22px;
+$font5L: 24px;
+$font6L: 26px;
+$font7L: 28px;
+$font8L: 30px;
+$font9L: 32px;
+
+// --★ other
+
+
+
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	methods  /￣￣￣￣l____________________________________________
+*/
+
+// ━★	responsible 
+$sp: "screen and (max-width: 999px)";
+$pc: "screen and (min-width: 1000px)";
+/*
+	SP  --  @media #{$sp} { }
+	PC  --  @media #{$pc} { }
+*/
+.spElement {
+	@media #{$pc} {
+		display: none !important;
+	}
+}
+.pcElement {
+	@media #{$sp} {
+		display: none !important;
+	}
+}
+
+
+
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	fonts  /￣￣￣￣l____________________________________________
+*/
+
+
+
+
+
+
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	imports  /￣￣￣￣l______________________________________________
+*/
+
+// ━★  basic css
+@import "setting";
+@import "mixin";
+
+// ━★  page common css
+@import "common/inner";
+@import "common/header";
+@import "common/footer";
+
+// ━★  page css 
+@import "pages/top";

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+	<title>SimpleWebTask @ README-つかいかた</title>
+</head>
+<body>
+<style>
+	@media screen and (min-width: 850px) {
+		.sp {
+			display: none;
+		}
+		body {
+			width: 800px;
+			margin: auto;
+			font-weight: 400;
+			font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif;
+		}
+		footer {
+			margin: 4em auto 0 auto;
+			text-align: center;
+			font-size: 30px;
+			letter-spacing: .1em;
+			padding-top: .3em;
+			padding-bottom: .2em;
+			font-family: 'Monofett', cursive;
+
+			color: rgb(255, 239, 253);
+			background-color: rgb(253, 100, 202);
+			border-radius: 1.5em 1.5em 0 0;
+		}
+		footer svg {
+			margin-right: .5em;
+		}
+		h1 {
+			color: #364e96;
+			border: solid 3px #364e96;
+			padding: 0.5em;
+			border-radius: 0.5em;
+			text-align: center;
+		}
+		section {
+			margin: 2em auto;
+			padding: 0 2em;
+			width: 700px;
+		}
+		p {
+			margin: 1em;
+			font-size: 12px;
+			color: #22315c;
+			font-weight: 600;
+		}
+		ul, ol {
+			color: #1e366a;
+			border-top: solid #1e366a 1px;
+			border-bottom: solid #1e366a 1px;
+			padding: 0.5em 0 0.5em 1.5em;
+			font-weight: 700;
+		}
+		ul li, ol li {
+			line-height: 1.5;
+			padding: 0.5em 0;
+		}
+		li span {
+			font-size: 14px;
+		}
+		h2 {
+			color: #f1f1f1;
+			width: 100%;
+			font-size: 16px;
+			padding: 0.3em;
+			display: inline-block;
+			line-height: 1.3;
+			background: #364e96;
+			vertical-align: middle;
+			border-radius: 25px 0px 0px 25px;
+		}
+		h2:before {
+			content: '●';
+			color: white;
+			margin-right: 8px;
+		}
+		h3 {
+			position: relative;
+			line-height: 1;
+			margin-bottom: .5em;
+			padding:0.15em 1em;
+			display: inline-block;
+			top:0;
+			font-size: 16px;
+			color: #364e96;
+		}
+		h3:before, h3:after { 
+			position: absolute;
+			top: -.1em;
+			content:'';
+			width: 8px;
+			height: 100%;
+			display: inline-block;
+		}
+		h3:before {
+			border-left: solid 1px #364e96;
+			border-top: solid 1px #364e96;
+			border-bottom: solid 1px #364e96;
+			left: 0;
+		}
+		h3:after {
+			content: '';
+			border-top: solid 1px #364e96;
+			border-right: solid 1px #364e96;
+			border-bottom: solid 1px #364e96;
+			right: 0;
+		}
+		h4 {
+			font-size: 16px;
+			color: #364e96;
+			margin-top:0;
+			padding-left: .4em;
+			padding-bottom: .1em;
+			line-height: 1.3;
+			z-index:-1;
+			border-bottom: solid 1px #364e96;
+		}
+		.content {
+			padding: 1em;
+		}
+		.subsection {
+			margin-left: 1em;
+			margin-bottom: 1em;
+			padding: 1em 0 .3em 0;
+		}
+		.subsection p {
+		}
+		.directory {
+			font-size: 12px;
+			padding: 1em;
+			white-space: pre;
+			background-color: aliceblue;
+			line-height: 2;
+			color: #22315c;
+			border-radius: .7em;
+			border: dotted 1px rgb(165, 220, 224);
+			font-family: 'Source Code Pro', monospace;
+			font-weight: 600;
+		}
+		.dl {
+			font-size: 14px;
+			color: #22315c;
+			margin-left: 1em;
+			font-weight: 600;
+		}
+		.dl dt {
+			display: inline-block;
+			border-bottom: 1px dotted #364e96;
+			background-color: rgb(234, 241, 247);
+		}
+		.dl dd {
+			margin-inline-start: 1em;
+			margin-bottom: .5em;
+		}
+		.taskdl {
+			font-size: 12px;
+			margin: 2em;
+			padding: 1em;
+			background-color: aliceblue;
+		}
+		.taskdl dt {
+			background: 0;
+			margin-bottom: 4px;
+		}
+		.root {
+			background-color: rgba(201, 204, 228, .7);
+			border: solid 2px rgba(161, 182, 201, .7);
+			box-sizing: border-box;
+		}
+		.parent {
+			background-color: rgba(247, 234, 242, .7);
+			border: solid 2px rgba(241, 220, 232, .7);
+			box-sizing: border-box;
+		}
+		.parent2 {
+			background-color: rgba(230, 247, 229, .7);
+			border: solid 2px rgba(206, 236, 203, .7);
+			box-sizing: border-box;
+		}
+		.parent3 {
+			background-color: rgba(226, 228, 243, 0.7);
+			border: solid 2px rgba(216, 222, 238, 0.7);
+			box-sizing: border-box;
+		}
+		.setting {
+			font-family: '游ゴシック体', 'Yu Gothic', YuGothic, sans-serif;
+			font-size: 12px;
+			font-weight: 700;
+			color: rgb(201, 71, 11);
+		}
+		.important {
+			text-decoration:underline;
+			text-decoration-color: rgb(54, 44, 112);
+			text-underline-position: under;
+		}
+	}
+	@media screen and (max-width: 849px) {
+		.pc {
+			display: none;
+		}
+		.sp {
+			font-size: 10px;
+			text-align: center;
+			margin-top: 200px;
+		}
+	}
+</style>
+	<p class="sp">※スマホとかでは見れません(;_;)</p>
+	<main class="pc">
+		<h1>
+			SimpleWebTask
+		</h1>
+		<section>
+			<h2>このプロジェクトに必要なこと</h2>
+			<div class="content">
+				<ul>
+					<li>
+						<span>動作が軽く、機能が必要最低限であること</span>
+					</li>
+					<li>
+						<span>タスクを走らせる十分な意義があること</span>
+					</li>
+					<li>
+						<span>設定が容易であり、カスタムがしやすいこと</span>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>動作環境</h2>
+			<div class="content">
+				<h3>バージョン</h3>
+				<p>
+					SimpleWebTask v1.0 (2020/09/10)
+				</p>
+			</div>
+			<div class="content">
+				<h3>プロジェクトについて</h3>
+				<p>
+					クローン後は、ルートディレクトリにてベーシックなWeb制作をしていただけます。<br>
+					ディレクトリ構造については次のセクションに記載しています。<br>
+					<br>
+					プロジェクトにはすでに<span class="important">タスクランナー</span>(gulp)、<span class="important">scssのコンパイル</span>(gulp-sass)・<span class="important">JSのバンドル</span>(webpack)・<span class="important">JSのES5コンパイル</span>(babel)という必要最低限の機能が備わっています。<br>
+					<br>
+					タスクランナー(gulp)を走らせるには <class class="parent2">Node.js/</class> にて、ターミナルからコマンドを打ち込みます。<br>
+					コマンドはpackage.jsonの記述を参照。
+				</p>
+			</div>
+			<div class="content">
+				<h3>制作環境</h3>
+				<p>
+					<dl class="dl">
+						<dt>OS</dt>
+						<dd>windows10</dd>
+						<dt>Node.js</dt>
+						<dd>v12.16.1</dd>
+						<dt>gulp</dt>
+						<dd>CLI v2.2.0 / Local v4.0.2</dd>
+						<dt>webpack</dt>
+						<dd>v4.44.1</dd>
+					</dl>
+				</p>
+				<p>
+					テストはしていないのでそのまま<span class="important">推奨環境</span>でもあります。
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2>ディレクトリ説明</h2>
+			<div class="content">
+				<h3>ディレクトリ構造</h3>
+				<p class="directory"><span class="root">root/</span>
+　├ index.html
+　├ <span class="parent">_Assets/</span>
+　│　├ index.css
+　│　└ index.js
+　└ <span class="parent">_Develops/</span>
+　　　├ <class class="parent2">Node.js/</class>
+　　　│　├ <span class="parent3">node_modules/</span>
+　　　│　├ <span class="important">gulpfile.js</span>        <span class="setting">★ 設定ファイル</span>
+　　　│　├ package.json 
+　　　│　└ <span class="important">webpack.config.js</span>  <span class="setting">★ 設定ファイル</span>
+　　　└ <span class="parent2">Resources/</span>
+　　　　　├ <span class="parent3">js/</span>
+　　　　　├ <span class="parent3">scss/</span>
+　　　　　└ <span class="parent3">views/</span>
+				</p>
+			</div>
+			<div class="content">
+				<h3>構成について</h3>
+				<p>
+					このプロジェクトは <span class="parent">_Develops/</span> > <class class="parent2">Node.js/</class> 内で動く、Node.js環境です。<br>
+					<span class="parent3">npm run</span> スクリプトはpackage.jsonが存在する <class class="parent2">Node.js/</class> フォルダ内で走らせます。<br>
+					<br>
+					作業者は主に <span class="root">root/</span>下にフォルダを作成したり、 <span class="parent">_Assets/</span> フォルダ内や、<span class="setting">★</span> 設定ファイルを触ります。<br>
+				</p>
+			</div>
+			<div class="content">
+				<h3>各ディレクトリの説明</h3>
+				<p>
+					役割がわかりやすいように分類わけしてあります。
+				</p>
+				<div class="subsection">
+					<h4>root/</h4>
+					<p>
+						このプロジェクトではルーティングを行わないので、こちらがウェブサイトのルートディレクトリになります。<br>
+						<span class="parent3">index.html</span> が初期ページです。
+					</p>
+				</div>
+				<div class="subsection">
+					<h4>_Assets/</h4>
+					<p>
+						HTML内で読み込むファイルを収納するディレクトリです。画像や動画、pdfなどを分類わけします。<br>
+						また、<span class="important">コンパイルされたjsやcssもこちらに吐き出されます</span>。<br>
+						既定ではそれぞれ <span class="parent3">index.css</span> <span class="parent3">index.js</span> と命名されます。<br>
+						<br>
+						HTML内で指定されるパス(src属性)は、 <span class="parent3">./_Assets/..</span> から始まるものが望ましいです。<br>
+						<br>
+						<span class="parent3">&lt;img src="./_Assets/images/PC/titlelogo.png" alt="title"&gt;</span> など。
+					</p>
+				</div>
+				<div class="subsection">
+					<h4>_Develops/
+					</h4>
+					<p>
+						主にこちらで開発を進めます。Developは開発の意。<br>
+					</p>
+				</div>
+				<div class="subsection">
+					<h4>Node.js/</h4>
+					<p>
+						<span class="parent3">npm run</span> スクリプトを走らせるには、このディレクトリに移動します。<br>
+						<br>
+						中身はディレクトリ名の通りです。Node.jsに関するモジュールや、モジュールの設定などはこちらにあります。<br>
+						gulpやbabelはNode.jsで動いています。<br>
+						<br>
+						<span class="parent3">gulpfile.js</span> <span class="parent3">webpack.config.js</span> といった設定ファイル内で定義された<span class="parent3">config</span> のプロパティを変更することで、<br>
+						jsやscssのコンパイルを行うgulpやwebpack(bandle,babel)の挙動を変更できます。<br>
+						<br>
+						この中をいじるときは、主にディレクトリ構造を変更するときと、nodeモジュールを追加するときだけ。<br>
+					</p>
+				</div>
+				<div class="subsection">
+					<h4>Resources/</h4>
+					<p>
+						コンパイル前のファイルを作るところ。<span class="important">scssやjsはこちらに作成します</span>。<br>
+						gulpはこのディレクトリを監視し、コンパイル用のタスクを走らせます。<br>
+						<br>
+						Node.jsはスクリプトを起動することでこのディレクトリのファイルを監視・コンパイルし、コンパイル後のファイルを <span class="parent">_Assets/</span> へと吐き出します。<br>
+						<br>
+						なお、jsはwebpackを知っている前提です。エントリーポイントは <span class="parent3">Resources/js/index.js</span> に設定してあります。<br>
+						<span class="parent3">views/</span> にはテンプレートをしまいます。使用しない場合は必要ありません。
+					</p>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>作業する</h2>
+			<div class="content">
+				<p>
+					<span class="parent">_Assets/</span> にWeb制作で使用する画像や動画を収納します。<br>
+					また、ルート下に自由にディレクトリを作成できます。<br>
+					<br>
+					作業時にはタスクランナー(gulp)を起動させます。<br>
+					<span class="parent">_Develops/</span> > <span class="parent2">Node.js/</span> のディレクトリにて、ターミナルを開きます。<br>
+					<br>
+					まずは <span class="parent3">npm i</span> というコマンドを実行し、必要なモジュールをインストールします。<br>
+					その後、以下のスクリプトを使えるようになります。（同ディレクトリ）
+				</p>
+				<p>
+					<dl class="dl taskdl">
+						<dt>gulp</dt>
+						<dd><span class="parent2">Resources/</span> > <span class="parent3">SCSS/</span> を監視し、scssコンパイルを行います。<br>
+						gulpをグローバルインストールしている必要がある。</dd>
+						<dt>npm run build</dt>
+						<dd><span class="parent2">Resources/</span> > <span class="parent3">SCSS/</span> と <span class="parent2">Resources/</span> > <span class="parent3">JS/</span>にて、scssコンパイル・JSのバンドル・JSのES5コンパイルを行います。</dd>
+						<dt>npm run scss</dt>
+						<dd><span class="parent2">Resources/</span> > <span class="parent3">SCSS/</span> にて、scssコンパイルを行います。</dd>
+						<dt>npm run js</dt>
+						<dd><span class="parent2">Resources/</span> > <span class="parent3">JS/</span> にて、JSのバンドル・JSのES5コンパイルを行います。</dd>
+						<dt>npm run dev</dt>
+						<dd><span class="parent2">Resources/</span> > <span class="parent3">SCSS/</span> と <span class="parent2">Resources/</span> > <span class="parent3">JS/</span> を監視し、scssコンパイル・JSのバンドル・JSのES5コンパイルを行います。</dd>
+					</dl>
+				</p>
+			</div>
+		</section>
+		<section>
+			<h2>デプロイについて</h2>
+			<div class="content">
+				<p>
+					Web制作では開発を進めるごとにファイル数が嵩んでいきます。FTPなどでデプロイをする際、増えたデータの分だけ転送データを選ぶプロセスが重くなります。<br>
+					このプロジェクトではディレクトリ構造を単純化することで、その問題点を解決しています。<br>
+					<br>
+					HTMLで呼び出すデータを <span class="parent3">_Assets/</span> 、ステージング環境に使用しない開発データを<span class="parent">_Develops/</span> と分けることで、デプロイを単純化できます。<br>
+					<br>
+					具体的にはステージング環境に <span class="parent">_Develops/</span> を転送しないことで実現できます。
+					(あるいは <span class="parent">_Develops/</span> 以外すべてを転送する）
+				</p>
+			</div>
+		</section>
+	</main>
+	<footer class="pc">
+		<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="12.000000pt" height="12.000000pt" viewBox="0 0 1280.000000 1264.000000"
+ preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.15, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,1264.000000) scale(0.100000,-0.100000)"
+fill="#fff" stroke="none">
+<path d="M2470 12625 c-495 -73 -907 -445 -1024 -925 -35 -143 -36 -192 -36
+-1445 0 -1358 -1 -1325 56 -1505 62 -197 160 -357 308 -506 176 -175 376 -285
+616 -339 117 -26 337 -31 461 -10 514 86 907 461 1021 976 l23 104 0 1270 c0
+1376 2 1332 -56 1520 -179 581 -765 950 -1369 860z"/>
+<path d="M9366 12629 c-507 -66 -919 -434 -1047 -939 -37 -148 -40 -264 -36
+-1515 l3 -1210 23 -99 c116 -513 508 -886 1020 -971 124 -21 342 -16 461 10
+237 53 441 164 616 339 190 191 306 417 349 680 22 139 22 2535 0 2666 -46
+272 -161 496 -349 684 -275 274 -655 404 -1040 355z"/>
+<path d="M500 3827 c-154 -48 -269 -125 -355 -239 -196 -258 -190 -606 15
+-852 48 -58 283 -261 547 -472 2182 -1751 4398 -2488 6623 -2203 1589 203
+3175 934 4737 2182 229 182 471 388 543 461 344 349 192 958 -277 1112 -80 26
+-101 29 -223 29 -121 -1 -143 -4 -208 -28 -108 -39 -165 -75 -297 -188 -774
+-659 -1489 -1145 -2225 -1514 -837 -419 -1643 -655 -2495 -730 -241 -22 -728
+-22 -970 0 -826 73 -1602 295 -2420 694 -762 371 -1498 868 -2300 1551 -200
+169 -293 210 -495 216 -109 4 -135 1 -200 -19z"/>
+</g>
+</svg>
+
+		2020 shihotarow All Rights Reserved.
+	</footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+@charset "UTF-8";
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	variables  /￣￣￣￣l____________________________________________
+*/
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	methods  /￣￣￣￣l____________________________________________
+*/
+/*
+	SP  --  @media screen and (max-width: 999px) { }
+	PC  --  @media screen and (min-width: 1000px) { }
+*/
+@media screen and (min-width: 1000px) {
+  .spElement {
+    display: none !important; } }
+
+@media screen and (max-width: 999px) {
+  .pcElement {
+    display: none !important; } }
+
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	fonts  /￣￣￣￣l____________________________________________
+*/
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	imports  /￣￣￣￣l______________________________________________
+*/
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	reset css  /￣￣￣￣l____________________________________________
+*/
+body {
+  color: #333;
+  background-color: #eee;
+  font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'YuGothic', '游ゴシック', 'メイリオ', Meiryo, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif; }
+
+a {
+  color: #0000ff; }
+  a:hover {
+    opacity: .8; }
+
+/*
+[HTML5 Reset Stylesheet]
+http://html5doctor.com/html-5-reset-stylesheet/
+latest 2009-07-27
+
+https://magazine.krowl.jp/3441/
+latest 2019-08-01
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul, ol {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+img {
+  vertical-align: bottom;
+  line-height: 1.0; }
+
+button {
+  line-height: 1.0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none; }
