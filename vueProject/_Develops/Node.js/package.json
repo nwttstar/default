@@ -1,0 +1,29 @@
+{
+  "name": "vue-app",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "gulp scss js",
+    "scss": "gulp scss",
+    "js": "gulp js",
+    "dev": "gulp dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "vue": "^2.6.12",
+    "webpack": "^4.44.1",
+    "webpack-stream": "^6.1.0"
+  },
+  "browserslist": [
+    "Explorer 11",
+    "iOS 9.0",
+    "Android 4.1"
+  ]
+}
