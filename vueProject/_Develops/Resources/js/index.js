@@ -1,3 +1,11 @@
 import { alertMessage } from "./hoge"
+import Vue from "../../Node.js/node_modules/vue/dist/vue.esm.js"
 
-alertMessage()
+
+import app from '../vue/app.vue'
+
+new Vue({
+  el: '#app',
+  components: { app },
+  template: '<app/>',
+})

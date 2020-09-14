@@ -25,6 +25,7 @@ const path = {
   scss: config.directory.resources + 'scss/**',
   scssIndex: config.directory.resources + 'scss/index.scss',
   js: config.directory.resources + 'js/**',
+  vue: config.directory.resources + 'vue/**',
 }
 const folder = {
   css: config.directory.assets,
@@ -38,7 +39,8 @@ const folder = {
 
 const scss = (done) => {
   src(path.scssIndex, {
-    since: lastRun(scss)
+    since: lastRun(scss),
+    base: config.directory.resources + 'scss/',
   })
   .pipe(sass())
   .pipe(dest(folder.css));
@@ -66,6 +68,7 @@ const js = (done) => {
 
 exports.default = () => {
   watch(path.scss, scss)
+  watch(path.vue, js)
 }
 
 // custom method
@@ -75,4 +78,5 @@ exports.js = js
 exports.dev = () => {
   watch(path.scss, scss)
   watch(path.js, js)
+  watch(path.vue, js)
 }

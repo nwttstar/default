@@ -1,4 +1,11 @@
 /* ---------------------------*/
+/* modules                    */
+/* ---------------------------*/
+
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
+
+/* ---------------------------*/
 /*  config                    */
 /* ---------------------------*/
 
@@ -36,15 +43,24 @@ module.exports = {
     path: path.dest
   },
   module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/, // babelを通さないディレクトリ
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: [['@babel/preset-env', { modules: false }]]
+    rules: [
+      {
+        test: /\.vue$/,
+        use: {
+          loader: 'vue-loader'
+        }
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/, // babelを通さないディレクトリ
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', { modules: false }]]
+          }
         }
       }
-    }]
-  }
+    ]
+  },
+  plugins: [new VueLoaderPlugin()]
 };
