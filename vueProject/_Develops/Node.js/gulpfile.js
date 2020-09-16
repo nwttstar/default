@@ -39,7 +39,6 @@ const folder = {
 
 const scss = (done) => {
   src(path.scssIndex, {
-    since: lastRun(scss),
     base: config.directory.resources + 'scss/',
   })
   .pipe(sass())
