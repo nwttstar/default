@@ -46,7 +46,7 @@
 	}
 }
 
-@mixin arrow($argSize, $argThick, $argRight, $argLeft, $argDeg) {
+@mixin arrow($argSize, $argThick, $argRight, $argLeft, $argDeg, $argColor) {
 	&::before {
 		content: '';
 		display: inline-block;

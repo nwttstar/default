@@ -6,6 +6,7 @@
   "scripts": {
     "build": "gulp scss js",
     "scss": "gulp scss",
+    "css": "gulp css",
     "js": "gulp js",
     "dev": "gulp dev"
   },
@@ -14,9 +15,11 @@
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
+    "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
     "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.1.0",
     "style-loader": "^1.2.1",
     "vue": "^2.6.12",
@@ -26,8 +29,12 @@
     "webpack-stream": "^6.1.0"
   },
   "browserslist": [
+    "defaults",
     "Explorer 11",
     "iOS 9.0",
     "Android 4.1"
-  ]
+  ],
+  "dependencies": {
+    "tailwindcss": "^1.8.10"
+  }
 }
