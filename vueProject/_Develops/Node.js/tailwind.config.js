@@ -1,12 +1,12 @@
 module.exports = {
   future: {
-    emoveDeprecatedGapUtilities: true,
+    removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
   purge: {
     layers: ['utilities'],
     enabled: true,
-    content: ['../../index.html','../Resources/vue/*.vue']
+    content: ['../../index.html','../Resources/vue/**']
   },
   prefix: '-',
   theme: {
@@ -23,10 +23,23 @@ module.exports = {
         base3: '#de3600',
       },
       f: {
-        base1: '#003618',
+        base1: '#000018',
         base2: '#de0018',
         base3: '#de3600',
       }
+    },
+    fontSize: {
+      '10': '10px',
+      '12': '12px',
+      '14': '14px',
+      '16': '16px',
+      '18': '18px',
+      '20': '20px',
+      '24': '24px',
+      '28': '28px',
+      '32': '32px',
+      '36': '36px',
+
     },
     fontFamily: {
       display: ['メイリオ', 'sans-serif'],
@@ -55,23 +68,29 @@ module.exports = {
     },
     extend: {
       spacing: {
-        ...[...Array(100)].reduce((m, _, i) => {
-          m[i] = `${i}px`
-          return m
+        // 1px - 25px：1px刻みで指定化
+        // 26px - 100px：2px刻みでまで指定可
+        // （コンパイル負担削減のため）
+        ...[...Array(51)].reduce((m, _, i) => {
+          if( i < 26) {
+            m[i] = `${i}px`
+            return m
+          } else {
+            m[i*2] = `${i*2}px`
+            return m
+          }
         }, {}),
+        // 任意のspacing
+        // '77': '77px'
       },
     },
   },
   variants: {
-    borderWidth: ['responsive', 'hover', 'focus']
   },
   plugins: [
 
   ],
   corePlugins: {
-    fontFamily: false,
-    fontSize: false,
-    textColor: false,
     accessibility: false,
     appearance: false,
     backgroundAttachment: false,

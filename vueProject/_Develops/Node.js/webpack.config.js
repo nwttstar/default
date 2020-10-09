@@ -47,8 +47,40 @@ module.exports = {
       {
         test: /\.vue$/,
         use: {
-          loader: 'vue-loader'
+          loader: 'vue-loader',
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions:{
+                plugins: [
+                  [
+                    'autoprefixer',
+                    {
+                      grid: true
+                    },
+                  ],
+                ]
+              }
+            }
+          },
+          'sass-loader',
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: [
+                absolutePath.resolve(__dirname, `${config.directory.resources}scss/_setting.scss`),
+                absolutePath.resolve(__dirname, `${config.directory.resources}scss/_mixin.scss`),
+              ]
+            }
+          }
+        ]
       },
       {
         test: /\.js$/,
