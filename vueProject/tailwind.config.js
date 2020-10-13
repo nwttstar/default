@@ -2,11 +2,13 @@ module.exports = {
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
+    defaultLineHeights: true,
+    standardFontWeights: true,
   },
   purge: {
     layers: ['utilities'],
     enabled: true,
-    content: ['../../index.html','../Resources/vue/**']
+    content: ['index.html','./_resources/vue/**']
   },
   prefix: '-',
   theme: {

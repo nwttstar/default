@@ -8,7 +8,7 @@
     </form>
     <h2 class="title-head -mb-23 -px-2 -text-xl">List Todo</h2>
     <ul class="-py-2 -px-4">
-      <li class="-p-2 -border">
+      <li class="p-8 -border">
         <p class="-border-b">todo 1</p>
         <p class="-text-sm">2020 05/12</p>
       </li>
@@ -24,29 +24,59 @@
     <btn
       btnLabel="B.Taaa.N"
     />
+    <router-link to="/A" class="mr-3 no-underline">Aarea</router-link> 
+    <router-link to="/B" class="mr-3 no-underline">Barea</router-link>    
+    
+    <router-view></router-view>
+    <button @click="back">back</button>
+    <hr>
+    <h2>store</h2>
+    <p>{{ getNumbers }}</p>
+    <button @click="calc(getNumbers)">+++</button>
+    <v-btn dark>Button</v-btn>
   </div>
 </template>
 
 <script>
 import btn from '../vue/parts/btn.vue'
+import { 
+  VBtn, VFooter
+} from 'vuetify/lib'
 
 export default {
   components: {
-		btn
+    btn,
+    VBtn,
+    VFooter
 	},
-    data: () => {
-        return {
-            greeting: 'konn',
-            btnLabel: ''
-        }
+  data() {
+    return {
+        greeting: 'konn',
+        btnLabel: ''
     }
+  },
+  methods: {
+    back() {
+      window.history.length > 1
+        ? this.$router.go(-1)
+        : this.$router.push('/')
+    },
+    calc(num) {
+      this.$store.dispatch('calc')
+    }
+  },
+  computed: {
+    getNumbers() {
+      return this.$store.state.count;
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 
 ::v-deep .title-head {
-    color: $fontColor_link;
+  color: blue;
 }
 ::v-deep .btn-BTN {
   color: red;
