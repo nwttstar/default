@@ -38,12 +38,6 @@ module.exports = {
   watchOptions: {
     ignored: ['/node_modules/', '/_assets/']
   },
-  cache: { // キャッシュで二回目以降のコンパイルを高速化
-    type: 'filesystem',
-    buildDependencies: {
-      config: [__filename]
-    }
-  },
   entry: path.entry,
   output: {
     filename: path.destname,
@@ -71,9 +65,9 @@ module.exports = {
         }
       },
       {
-        test: /\.(sass|css|scss)$/,
+        test: /\.(|css|scss)$/,
         use: [
-          'vue-style-loader',
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -85,7 +79,35 @@ module.exports = {
           {
             loader: "sass-loader",
             options: {
-              sourceMap: enabledSourceMap
+              sourceMap: enabledSourceMap,
+              implementation: require('sass'),
+              sassOptions: {
+                indentedSyntax: false
+              },
+            },
+          },
+        ]
+      },
+      {
+        test: /\.sass$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+              sourceMap: enabledSourceMap,
+            }
+          },
+          'postcss-loader',
+          {
+            loader: "sass-loader",
+            options: {
+              sourceMap: enabledSourceMap,
+              implementation: require('sass'),
+              sassOptions: {
+                indentedSyntax: true
+              },
             },
           },
         ]

@@ -4,8 +4,12 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "npx webpack",
-    "dev": "npx webpack --watch"
+    "bandle": "npx webpack",
+    "build": "webpack && gulp scss css",
+    "scss": "gulp scss",
+    "css": "gulp dev",
+    "js": "gulp js",
+    "dev": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
@@ -37,5 +41,10 @@
     "iOS 9.0",
     "Android 4.1"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "webpack-stream": "^6.1.0"
+  }
 }
