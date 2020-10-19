@@ -1,0 +1,95 @@
+/*
+ * このscss内で定義された変数・関数はvueコンポーネントの<style>内で使えます。
+ *
+ */
+
+
+@charset "utf-8";
+
+// -------★ basics
+@mixin fontSize($argPC, $argSP) {
+	font-size: $argPC;
+	@media #{$sp} {
+		font-size: $argSP;
+	}
+}
+@mixin hoverOpacity($argTrasition, $argOpacity) {
+	@media #{$pc} {	
+		transition: $argTrasition;
+		&:hover {
+			opacity: $argOpacity;
+		}
+	}
+}
+@mixin hoverMove($argDistance) {
+	@media #{$pc} {
+		&:hover {
+			position: relative;
+			top: $argDistance;
+			left: $argDistance;
+		}
+	}
+}
+@mixin boxshadow($argThick, $argOpacity) {
+	box-shadow: 0 $argThick/3 $argThick rgba(0, 0, 0, $argOpacity);
+}
+
+
+
+// -------★ button
+@mixin button($argWidth, $argHeight, $argFontColor, $argColor, $argBorderThick, $argBorderColor, $boxshadow: false, $hoverMove: false) {
+	width: $argWidth;
+	height: $argHeight;
+	color: $argFontColor;
+	background-color: $argColor;
+	border: $argBorderThick solid $argBorderColor;
+	@include boxshadow(6px, .25);
+	@if ($boxshadow) {
+		@include hoverMove(1px);
+	}
+	@if ($hoverMove) {
+		@include hoverOpacity(.2s, .8);
+	}
+}
+
+@mixin arrow($argSize, $argThick, $argRight, $argLeft, $argDeg, $argColor) {
+	&::before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		right: $argRight;
+		left: $argLeft;
+		margin-top: -($argSize / 2);
+		width: $argSize;
+		height: $argSize;
+		border-top: $argThick solid $argColor;
+		border-right: $argThick solid $argColor;
+		border-bottom: none;
+		border-left: none;
+		transform: rotate($argDeg);
+	}
+}
+
+
+// -------★ tag
+
+@mixin tag($argName, $argFont, $argWidth, $argHeight, $argText, $argBg, $srgRadius) {
+	white-space: wrap;
+	&::after{
+		content: $argName;
+		display: inline-block;
+		position: relative;
+		margin-left: 1em;
+		width: $argWidth;
+		font-size: $argFont;
+		line-height: ( $argHeight / $argFont );
+		text-align: center;
+		color: $argText;
+		background-color: $argBg; 
+		border-radius: $srgRadius;
+	}
+}
+
+
+

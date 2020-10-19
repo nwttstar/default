@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+
+
+
+/* 
+★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★゜・。。・゜゜・。。・゜☆゜・。。・゜゜・。。・゜★
+
+★  √￣￣￣＼	imports  /￣￣￣￣l______________________________________________
+*/
+
+// ━★  tailwindcss
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ━★  basic css
+@import "setting";
+@import "mixin";
