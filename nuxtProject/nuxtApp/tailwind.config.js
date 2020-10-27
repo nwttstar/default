@@ -11,6 +11,7 @@ module.exports = {
     content: ['pages/**', 'layouts/**', 'components/**']
   },
   prefix: '-',
+  important: true,
   theme: {
     screens: {
       'sp': '768px',
@@ -21,8 +22,10 @@ module.exports = {
       white: '#fff',
       b: {
         base1: '#de3618',
-        base2: '#de0018',
-        base3: '#de3600',
+        base2: '#3fa7d8',
+        base3: '#52df88',
+        base4: '#744b25',
+        base5: '#000',
       },
       f: {
         base1: '#000018',

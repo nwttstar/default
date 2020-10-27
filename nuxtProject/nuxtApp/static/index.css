@@ -604,9 +604,64 @@ video {
   }
 }
 
+.-bg-white{
+  --bg-opacity: 1 !important;
+  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, var(--bg-opacity)) !important;
+}
+
+.-bg-b-base2{
+  --bg-opacity: 1 !important;
+  background-color: #3fa7d8 !important;
+  background-color: rgba(63, 167, 216, var(--bg-opacity)) !important;
+}
+
+.-bg-b-base3{
+  --bg-opacity: 1 !important;
+  background-color: #52df88 !important;
+  background-color: rgba(82, 223, 136, var(--bg-opacity)) !important;
+}
+
+.-flex{
+  display: flex !important;
+}
+
+.-justify-end{
+  justify-content: flex-end !important;
+}
+
+.-h-screen{
+  height: 100vh !important;
+}
+
 .-my-10{
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+.-my-23{
+  margin-top: 23px !important;
+  margin-bottom: 23px !important;
+}
+
+.-fixed{
+  position: fixed !important;
+}
+
+.-bottom-0{
+  bottom: 0 !important;
+}
+
+.-z-10{
+  z-index: 10 !important;
+}
+
+.-z-20{
+  z-index: 20 !important;
+}
+
+.-z-30{
+  z-index: 30 !important;
 }
 
 @-webkit-keyframes spin{

@@ -1,11 +1,11 @@
 <template>
   <div>
-    nojii
+    このページにはnoflameが適応されています。
   </div>
 </template>
 
 <script>
 export default {
-  layout: 'nojilayout',
+  layout: 'noflame',
 }
 </script>
