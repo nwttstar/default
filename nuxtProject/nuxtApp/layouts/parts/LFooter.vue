@@ -1,11 +1,12 @@
 <template>
 	<v-card
-		class="wrap -flex -justify-end -align -items-end -fixed -bottom-0 -bg-white"
+		class="wrap -flex -justify-end -align -items-end -fixed -bottom-0 -bg-b-base4"
 	>
 		<v-btn
 			v-for="icon in icons"
 			:key="icon"
 			class="mx-4 -outline-none"
+			dark
 			icon
 		>
 			<v-icon size="24px">
@@ -69,7 +70,7 @@ export default {
 
 .wrap {
 	width: 100%;
-	height: 160px;
+	height: 50px;
 }
 
 </style>

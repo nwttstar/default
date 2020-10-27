@@ -1,11 +1,6 @@
 <template>
   <main>
-    とっぷぺーじ！
-    <logo />
-    <div class="mytext -my-10">まいてきすと</div>
-    <nuxt-link to="/noji">
-      なくすとりんく
-    </nuxt-link>
+    
 
   </main>
 </template>

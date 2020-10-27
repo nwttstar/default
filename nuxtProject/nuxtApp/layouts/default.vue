@@ -38,7 +38,7 @@ export default {
   right: -2px;
   width: 80vw;
   max-width: calc(100vw - 100px);
-  height: calc(100vh - 120px);
+  height: calc(100vh - 80px);
 }
 .v-sheet {
   border: none;

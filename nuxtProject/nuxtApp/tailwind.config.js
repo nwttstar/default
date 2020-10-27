@@ -22,9 +22,9 @@ module.exports = {
       white: '#fff',
       b: {
         base1: '#de3618',
-        base2: '#3fa7d8',
-        base3: '#52df88',
-        base4: '#744b25',
+        base2: '#ecf3f7',
+        base3: '#ecf3f7',
+        base4: '#444',
         base5: '#000',
       },
       f: {
