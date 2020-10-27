@@ -6,6 +6,7 @@
     <nuxt-link to="/noji">
       なくすとりんく
     </nuxt-link>
+
   </main>
 </template>
 
@@ -17,12 +18,12 @@ export default {
     Logo,
   },
   data: () => ({
-      items: [
-        ['mdi-email', 'Inbox'],
-        ['mdi-account-supervisor-circle', 'Supervisors'],
-        ['mdi-clock-start', 'Clock-in'],
-      ],
-    }),
+    items: [
+      ['mdi-email', 'Inbox'],
+      ['mdi-account-supervisor-circle', 'Supervisors'],
+      ['mdi-clock-start', 'Clock-in'],
+    ],
+  }),
 }
 </script>
 
