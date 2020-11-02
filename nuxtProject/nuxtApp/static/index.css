@@ -598,9 +598,9 @@ video {
   width: 100%;
 }
 
-@media (min-width: 768px){
+@media (min-width: 769px){
   .-container{
-    max-width: 768px;
+    max-width: 769px;
   }
 }
 
@@ -648,9 +648,25 @@ video {
   height: 100vh !important;
 }
 
+.-text-12{
+  font-size: 12px !important;
+}
+
+.-leading-none{
+  line-height: 1 !important;
+}
+
 .-my-23{
   margin-top: 23px !important;
   margin-bottom: 23px !important;
+}
+
+.-ml-3{
+  margin-left: 3px !important;
+}
+
+.-mr-10{
+  margin-right: 10px !important;
 }
 
 .-ml-10{
@@ -662,6 +678,18 @@ video {
   outline-offset: 2px !important;
 }
 
+.-p-30{
+  padding: 30px !important;
+}
+
+.-pt-15{
+  padding-top: 15px !important;
+}
+
+.-pr-18{
+  padding-right: 18px !important;
+}
+
 .-fixed{
   position: fixed !important;
 }
@@ -670,8 +698,18 @@ video {
   bottom: 0 !important;
 }
 
-.-w-40{
-  width: 10rem !important;
+.-text-center{
+  text-align: center !important;
+}
+
+.-text-f-base2{
+  --text-opacity: 1 !important;
+  color: #de0018 !important;
+  color: rgba(222, 0, 24, var(--text-opacity)) !important;
+}
+
+.-w-100{
+  width: 100px !important;
 }
 
 .-z-10{
@@ -797,26 +835,34 @@ video {
  *
  */
 
-@media (min-width: 768px){
+@media (max-width: 768px){
   .sp\:-container{
     width: 100%;
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 769px){
     .sp\:-container{
-      max-width: 768px;
+      max-width: 769px;
     }
+  }
+
+  .sp\:-p-15{
+    padding: 15px !important;
+  }
+
+  .sp\:-pl-8{
+    padding-left: 8px !important;
   }
 }
 
-@media (max-width: 769px){
+@media (min-width: 769px){
   .pc\:-container{
     width: 100%;
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 769px){
     .pc\:-container{
-      max-width: 768px;
+      max-width: 769px;
     }
   }
 }

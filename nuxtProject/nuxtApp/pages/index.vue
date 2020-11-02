@@ -1,6 +1,8 @@
 <template>
   <main>
-    
+    <h2 class="content-title">
+      How are <span class="-text-f-base2">y</span>ou?
+    </h2>
 
   </main>
 </template>

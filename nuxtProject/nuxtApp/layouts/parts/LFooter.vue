@@ -3,8 +3,10 @@
 		class="wrap -flex -justify-end -align -items-end -fixed -bottom-0 -bg-b-base4"
 	>
 		<v-btn
-			v-for="icon in icons"
+			v-for="[icon, link] in icons"
 			:key="icon"
+      :href="link"
+      target="_blank"
 			class="mx-4 -outline-none"
 			dark
 			icon
@@ -13,9 +15,9 @@
 				{{ icon }}
 			</v-icon>
 		</v-btn>
-    <div class="-ml-10">
+    <div class="-ml-10 -mr-10">
       <v-btn class="-outline-none">
-				<span class="-block -w-40">
+				<span class="-block -w-100">
         {{ msToTime(this.clockTime) }}
 				</span>
       </v-btn>
@@ -29,10 +31,10 @@ import { mapGetters, mapMutations, mapActions } from 'vuex'
 export default {
 	data: () => ({
 		icons: [
-			'mdi-facebook',
-			'mdi-twitter',
-			'mdi-linkedin',
-			'mdi-instagram',
+			['mdi-github', 'https://github.com/nwttstar'],
+			['mdi-twitter', 'https://github.com/nwttstar'],
+			['mdi-linkedin', 'https://github.com/nwttstar'],
+			['mdi-alpha-w-circle-outline', 'https://github.com/nwttstar'],
 		],
 	}),
 	computed: {

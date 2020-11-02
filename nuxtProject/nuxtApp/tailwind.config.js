@@ -14,8 +14,8 @@ module.exports = {
   important: true,
   theme: {
     screens: {
-      'sp': '768px',
-      'pc': {'max': '769px'}
+      'sp': {'max': '768px'},
+      'pc': {'min': '769px'}
     },
     colors: {
       black: '#000',
@@ -44,7 +44,6 @@ module.exports = {
       '28': '28px',
       '32': '32px',
       '36': '36px',
-
     },
     fontFamily: {
       display: ['メイリオ', 'sans-serif'],
@@ -71,23 +70,23 @@ module.exports = {
       '80': '0.8',
       '100': '1',
     },
+    spacing: {
+      // 1px - 25px：1px刻みで指定化
+      // 26px - 100px：2px刻みでまで指定可
+      // （コンパイル負担削減のため）
+      ...[...Array(25)].reduce((m, _, i) => {
+        m[i] = `${i}px`
+        return m
+      }, {}),
+      ...[...Array(38)].reduce((m, _, i) => {
+        m[i*2+26] = `${i*2+26}px`
+        return m
+      }, {}),
+      // 任意のspacing
+      // '77': '77px'
+    },
     extend: {
-      spacing: {
-        // 1px - 25px：1px刻みで指定化
-        // 26px - 100px：2px刻みでまで指定可
-        // （コンパイル負担削減のため）
-        ...[...Array(51)].reduce((m, _, i) => {
-          if( i < 26) {
-            m[i] = `${i}px`
-            return m
-          } else {
-            m[i*2] = `${i*2}px`
-            return m
-          }
-        }, {}),
-        // 任意のspacing
-        // '77': '77px'
-      },
+      
     },
   },
   variants: {

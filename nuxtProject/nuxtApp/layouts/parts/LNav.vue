@@ -13,7 +13,7 @@
 				rounded
 			>
         <v-list-item
-          v-for="([icon, text, link], i) in items"
+          v-for="([icon, text, link, tag], i) in items"
           :key="i"
           nuxt
 					:to="link"
@@ -25,7 +25,10 @@
 					<v-list-item-content
             class="pcElement"
           >
-						<v-list-item-title>{{ text }}</v-list-item-title>
+						<v-list-item-title>
+              {{ text }}
+              <span class="-ml-3 -text-12 -text-f-base2">{{ tag }}</span>
+            </v-list-item-title>
 					</v-list-item-content>
         </v-list-item>
       </v-list>
@@ -37,9 +40,11 @@
 export default {
 	data: () => ({
 		items: [
-			['mdi-email', 'Inbox', '/'],
-			['mdi-account-supervisor-circle', 'Howto', '/howto'],
-			['mdi-clock-start', 'Clock-in', '/noji'],
+			['mdi-home', 'Home', '/'],
+			['mdi-file-question-outline', 'Howto', '/howto'],
+      ['mdi-gamepad-variant-outline', 'Game', '/game'],
+      ['mdi-gamepad-variant', 'Game', '/game2', '(Hard)'],
+      ['mdi-treasure-chest', 'Reward', '/reward'],
 		],
 	}),
 }
