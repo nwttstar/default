@@ -4,7 +4,7 @@
     <div class="-flex">
       <l-nav />
       <v-card
-        class="content -fixed -p-30 sp:-p-15 -z-20 -bg-b-base3"
+        class="content -fixed -p-30 sp:-p-15 -z-20 -bg-b-base3 -overflow-y-scroll"
         v-ripple
       >
         <nuxt />
@@ -40,6 +40,7 @@ export default {
   width: 80vw;
   max-width: calc(100vw - 100px);
   height: calc(100vh - 80px);
+  border-bottom: solid 3px rgb(237, 244, 247) !important;
 }
 .v-sheet {
   border: none;
@@ -58,7 +59,6 @@ export default {
   background-color: white;
   border-top: solid 6px $baseColor;
   border-bottom: solid 6px $baseColor;
-  box-shadow: 1px 3px 2px #eee;
 
   &::after {
     content: '';
