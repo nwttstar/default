@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <p>C area!!!!</p>
-    
-  </div>
+	<div>
+		<p>C area!!!!</p>
+		
+	</div>
 </template>
 
 <script>

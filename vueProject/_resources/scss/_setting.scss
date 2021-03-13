@@ -12,43 +12,21 @@
 ★  √￣￣￣＼	variables  /￣￣￣￣l____________________________________________
 */
 
-// ━★	colors 
-$baseColor: #333;
-$baseColorBg: #eee;
-$baseColor_sub: #fff;
-$baseColorBg_sub: #fff;
-$baseColor_sub2: #fff;
-$baseColorBg_sub2: #fff;
-$accentColor: #f4ad53;
-$accentColor_sub: #1380b1;
+// ━★	bg colors 
+	$text-b-1: '#fde08e';
+	$text-b-2: '#eee';
+	$text-b-3: '#de3600';
 
 // ━★	font colors
-$fontColor: #333;
-$fontColor_Sub: #333;
-$fontColor_Sub2: #fff;
-$fontColor_link: #0000ff;
+	$text-f-1: '#333';
+	$text-f-2: '#222';
+	$text-f-3: '#eee';
 
-// --★	boder style
-$borderColor: #ccc;
-$borderColor_Sub: #ccc;
+// --★	accent style
+	$text-a-1: '#000099';
+	$text-a-2: '#de0000';
 
-// --★ fonts size
-$font3S: 8px;
-$font2S: 10px;
-$fontS: 12px;
-$fontM: 14px;
-$fontL: 16px;
-$font2L: 18px;
-$font3L: 20px;
-$font4L: 22px;
-$font5L: 24px;
-$font6L: 26px;
-$font7L: 28px;
-$font8L: 30px;
-$font9L: 32px;
-
-// --★ other
-
+// --★	custom
 
 
 /* 
@@ -58,19 +36,29 @@ $font9L: 32px;
 */
 
 // ━★	responsible 
-$sp: "screen and (max-width: 999px)";
-$pc: "screen and (min-width: 1000px)";
-/*
-	SP  --  @media #{$sp} { }
-	PC  --  @media #{$pc} { }
-*/
-.spElement {
-	@media #{$pc} {
+$xs: "screen and (max-width: 400px)";
+$sm: "screen and (min-width: 768px)";
+$md: "screen and (min-width: 1000px)";
+$lg: "screen and (min-width: 1200px)";
+// scss内で@media #{$xs} { }
+
+.xsElement {
+	@media #{$sx} {
 		display: none !important;
 	}
 }
-.pcElement {
-	@media #{$sp} {
+.smElement {
+	@media #{$sm} {
+		display: none !important;
+	}
+}
+.mdElement {
+	@media #{$md} {
+		display: none !important;
+	}
+}
+.lgElement {
+	@media #{$lg} {
 		display: none !important;
 	}
 }

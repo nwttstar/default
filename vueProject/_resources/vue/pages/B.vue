@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <a>B area!</a>
-  </div>
+	<div>
+		<a>B area!</a>
+	</div>
 </template>
 
 <script>
